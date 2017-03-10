@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 600px;
+        width: 70%;
+        float: right;
+       }
+       #list {
+         height: 600px;
+         width: 30%;
+         float: left;
+         background-color: blue;
+        }
+      body {
+        background-color: black;
+      }
+      h2 {
+        color: white;
+      }
+      #list div {
+        height: 55px;
+        margin: 2px;
+        background-color: #77bfa7;
+        text-align: center;
+        line-height: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>SD Coffee Map: Best Coffee Shops to Work From in San Diego</h2>
+    </header>
+    <div id="map"></div>
+    <div id="list">
+    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjoBhsZUGUQu0boRkO9_0PudLDWI9cLu4&callback=startMap">
+    </script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+  </body>
+</html>
