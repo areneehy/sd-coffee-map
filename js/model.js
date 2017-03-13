@@ -4,6 +4,7 @@ var places = [
     lat: 32.7481701,
     lng: -117.1329807,
     description: "It's all about The Woods latte, made with hazelnut milk and maple syrup bitters. Plus, the clean interior design makes it easy to buckle down and get some work done.",
+    search: 'holsem+coffee',
   },
   {
     name: "Shore Thing Cafe",
@@ -40,6 +41,8 @@ var places = [
     lat: 33.1619922,
     lng: -117.3530438,
     description: "Grab a craft beer and a melt-in-your-mouth chocolate chip cookie while you work.",
+    hasBeer: true,
+    showItem: ko.observable(false),
   },
   {
     name: "Starbucks",
