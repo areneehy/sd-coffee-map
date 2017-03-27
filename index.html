@@ -13,16 +13,19 @@
     </header>
       <div id="list">
         <button onclick="drop()" class="dropbtn">Filter Results</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#" data-bind="click: resetAll">All results</a>
-          <a href="#" data-bind="click: showHasFood">Has Food</a>
-          <a href="#" data-bind="click: showHasBeer">Has Beer</a>
-          <a href="#" data-bind="click: showHasOutdoor">Outdoor Seating</a>
-          <a href="#" data-bind="click: showHasParking">Easy Parking</a>
+        <div id="myDropdown" class="dropdown-content" data-bind="foreach: filterTermArray">
+          <a href="#" data-bind="click: $root.filter, text: $data"></a>
         </div>
+
+        <div data-bind="foreach: locationsArray">
+          <div id="listView" class="listItems" data-bind="text: name, visible: showLocation, click: $root.clickMarker"></div>
+        </div>
+
       </div>
       <div id="map"></div>
-      <div id="photos"></div>
+      <div id="photos">
+        <!-- <img data-bind= "attr: {src: $root.pix}"> -->
+      </div>
     <script src="js/knockout-3.4.2.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/model.js"></script>
